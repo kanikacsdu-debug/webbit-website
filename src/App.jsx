@@ -382,7 +382,7 @@ export default function App() {
               <div className="mb-6 flex flex-col justify-end min-h-[4.5rem]">
                 <span className="text-sm line-through text-slate-500 tracking-wide mb-1">Rs. 11,999</span>
                 <div className="text-4xl font-black">
-                  Rs. 8,999<span className="text-sm font-normal text-slate-500">/one-time</span>
+                  Rs. 9,999<span className="text-sm font-normal text-slate-500">/one-time</span>
                 </div>
               </div>
 
