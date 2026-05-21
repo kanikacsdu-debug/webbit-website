@@ -364,6 +364,7 @@ export default function App() {
       </section>
 
       {/* --- PRICING TRANSPARENCY SECTION --- */}
+      {/* --- PRICING TRANSPARENCY SECTION --- */}
       <section id="pricing" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-900/10 dark:border-slate-800/60">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Transparent Pricing for Growing Brands</h2>
@@ -376,11 +377,19 @@ export default function App() {
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-indigo-400">Essential Startup</span>
               <h3 className="text-2xl font-bold mt-2 mb-4">Media Starter</h3>
-              <div className="text-4xl font-black mb-6">Rs. 9,999<span className="text-sm font-normal text-slate-500">/one-time</span></div>
+              
+              {/* Price Stack Component */}
+              <div className="mb-6 flex flex-col justify-end min-h-[4.5rem]">
+                <span className="text-sm line-through text-slate-500 tracking-wide mb-1">Rs. 11,999</span>
+                <div className="text-4xl font-black">
+                  Rs. 8,999<span className="text-sm font-normal text-slate-500">/one-time</span>
+                </div>
+              </div>
+
               <ul className="space-y-3 mb-8 text-sm">
                 <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> 2 Customized Logo options</li>
-                <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> A Custom Website </li>
-                <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> 3 Month Digital Assistance </li>
+                <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> 5 page responsive Custom Website </li>
+                <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> 1 Month Digital Assistance </li>
               </ul>
             </div>
             <a href="#contact" className="block text-center w-full py-3 rounded-xl border border-indigo-600 text-indigo-500 font-semibold hover:bg-indigo-600 hover:text-white transition-colors">Get Started</a>
@@ -392,11 +401,19 @@ export default function App() {
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-indigo-400">Digital Domination</span>
               <h3 className="text-2xl font-bold mt-2 mb-4">The Webbit Growth Pack</h3>
-              <div className="text-4xl font-black mb-6">Rs. 29,999<span className="text-sm font-normal text-slate-500">/one-time</span></div>
+              
+              {/* Price Stack Component */}
+              <div className="mb-6 flex flex-col justify-end min-h-[4.5rem]">
+                <span className="text-sm line-through text-slate-500 tracking-wide mb-1">Rs. 23,999</span>
+                <div className="text-4xl font-black">
+                  Rs. 19,999<span className="text-sm font-normal text-slate-500">/one-time</span>
+                </div>
+              </div>
+
               <ul className="space-y-3 mb-8 text-sm">
                 <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> Fully Responsive Website</li>
                 <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> Social Media Content Blueprint</li>
-                <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> 6 Month Digital Assistance </li>
+                <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> 3 Month Digital Assistance </li>
                 <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> Print Assests Included </li>
               </ul>
             </div>
@@ -408,11 +425,19 @@ export default function App() {
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-indigo-400">Ultimate Reach</span>
               <h3 className="text-2xl font-bold mt-2 mb-4">Elite Digital Presence</h3>
-              <div className="text-4xl font-black mb-6">Rs. 55,000<span className="text-sm font-normal text-slate-500">/one-time</span></div>
+              
+              {/* Price Stack Component */}
+              <div className="mb-6 flex flex-col justify-end min-h-[4.5rem]">
+                <span className="text-sm line-through text-slate-500 tracking-wide mb-1">Rs. 47,000</span>
+                <div className="text-4xl font-black">
+                  Rs. 39,999<span className="text-sm font-normal text-slate-500">/one-time</span>
+                </div>
+              </div>
+
               <ul className="space-y-3 mb-8 text-sm">
                 <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> Scalable Custom Website </li>
                 <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> Full Social Media Assistance</li>
-                <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> 1-Year Maintenance Architecture</li>
+                <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> 6 Month Maintenance Architecture</li>
                 <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> Customized Print Assests Included</li>
                 <li className="flex items-center gap-2"><CheckCircle size={14} className="text-indigo-500"/> Priority Support</li>
               </ul>
@@ -421,7 +446,6 @@ export default function App() {
           </div>
         </div>
       </section>
-
       {/* --- CONTACT ACQUISITION INTERFACE --- */}
       <section id="contact" className={`py-20 border-t ${darkMode ? 'bg-slate-900/40 border-slate-900' : 'bg-slate-100/50 border-slate-200'}`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
