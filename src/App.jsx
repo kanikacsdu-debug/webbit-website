@@ -9,7 +9,12 @@ import {
   Moon, 
   ArrowRight, 
   MessageSquare,
-  ExternalLink
+  ExternalLink,
+  Sparkles,
+  Gift,
+  Wrench,
+  Layers,
+  Coins
 } from 'lucide-react';
 
 export default function App() {
@@ -32,9 +37,6 @@ export default function App() {
 
   // Refined Core Service Portfolio Dataset with External Target Redirect URLs
   const portfolioItems = [
-    
-    
-    
     { 
       id: 2, 
       title: 'MyFitzone Gym', 
@@ -51,8 +53,6 @@ export default function App() {
       img: '/cafe.png',
       link: 'https://thunderous-lamington-da8787.netlify.app/'
     },
-
-  
     { 
       id: 5, 
       title: 'Poster Collection', 
@@ -69,7 +69,6 @@ export default function App() {
       img: '/coachingpre.png',
       link: 'https://instagram.com/apex-fitness-example'
     },
-    
   ];
 
   // Primary Offerings Category Architecture Array
@@ -93,7 +92,6 @@ export default function App() {
               alt="Webbit Custom Logo" 
               className="h-9 w-9 object-contain rounded-lg shadow-md"
               onError={(e) => {
-                // Inline styling callback fallback template if your file isn't dropped into /public/ yet
                 e.target.src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=100&q=80';
               }}
             />
@@ -106,6 +104,16 @@ export default function App() {
           <div className="hidden md:flex items-center gap-8 font-medium">
             <a href="#services" className="hover:text-indigo-500 transition-colors">Services</a>
             <a href="#portfolio" className="hover:text-indigo-500 transition-colors">Portfolio</a>
+            
+            {/* Smooth Scroll Early Bird Section Link */}
+            <a 
+              href="#early-bird" 
+              className="flex items-center gap-1.5 px-3 py-1 rounded-lg text-emerald-500 border border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10 transition-all font-semibold"
+            >
+              <Sparkles size={16} className="animate-pulse" />
+              Early Bird Offers
+            </a>
+
             <a href="#pricing" className="hover:text-indigo-500 transition-colors">Pricing</a>
             <a href="#contact" className="bg-indigo-600 text-white px-5 py-2 rounded-xl hover:bg-indigo-700 transition-all shadow-md shadow-indigo-600/20">Grow My Brand</a>
             
@@ -138,6 +146,12 @@ export default function App() {
           <div className={`md:hidden border-b px-4 pt-2 pb-6 flex flex-col gap-4 ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200'}`}>
             <a href="#services" onClick={() => setMobileMenuOpen(false)} className="py-2 text-lg">Services</a>
             <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="py-2 text-lg">Portfolio</a>
+            
+            {/* Mobile Early Bird Link */}
+            <a href="#early-bird" onClick={() => setMobileMenuOpen(false)} className="py-2 text-lg text-emerald-500 flex items-center gap-2 font-semibold">
+              <Sparkles size={18} /> Early Bird Offers
+            </a>
+
             <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="py-2 text-lg">Pricing</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="bg-indigo-600 text-white text-center py-3 rounded-xl">Grow My Brand</a>
           </div>
@@ -148,9 +162,13 @@ export default function App() {
       <section className="pt-32 pb-20 px-4 max-w-7xl mx-auto sm:px-6 lg:px-8 text-center relative overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
         
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 text-sm font-semibold mb-6">
-          Empowering Local Neighborhood Storefronts To Scale
-        </div>
+        {/* Clickable Banner sliding down to the offer segment */}
+        <a 
+          href="#early-bird"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-semibold mb-6 hover:bg-emerald-500/20 transition-all cursor-pointer"
+        >
+          <Gift size={16} className="animate-bounce" /> Early Bird Launch Offers Active! Click to view details ↓
+        </a>
         
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto mb-6 leading-[1.15]">
           You run your business. <br />
@@ -183,19 +201,16 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Custom Web Dev Node */}
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200'} hover:shadow-lg transition-all`}>
               <div className="text-indigo-500 mb-4 p-3 bg-indigo-500/10 inline-block rounded-xl"><Monitor size={28} /></div>
               <h3 className="text-xl font-bold mb-2">Customized Websites</h3>
               <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Hand-crafted, blazing-fast web interfaces built natively from scratch to turn local searches into paying checkouts.</p>
             </div>
-            {/* Social Media Optimization Node */}
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200'} hover:shadow-lg transition-all`}>
               <div className="text-purple-500 mb-4 p-3 bg-purple-500/10 inline-block rounded-xl"><Share2 size={28} /></div>
               <h3 className="text-xl font-bold mb-2">Social Media Boost</h3>
               <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Tailored organic content scheduling arrays and graphical assets engineered to capture local geo-locations.</p>
             </div>
-            {/* Physical Print Design Node */}
             <div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200'} hover:shadow-lg transition-all`}>
               <div className="text-emerald-500 mb-4 p-3 bg-emerald-500/10 inline-block rounded-xl"><MessageSquare size={28} /></div>
               <h3 className="text-xl font-bold mb-2">Posters & Print Assets</h3>
@@ -205,7 +220,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- PORTFOLIO MATRIX SECTION (WITH INTERACTIVE TAB LINKS) --- */}
+      {/* --- PORTFOLIO MATRIX SECTION --- */}
       <section id="portfolio" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
@@ -213,7 +228,6 @@ export default function App() {
             <p className={darkMode ? 'text-slate-400' : 'text-slate-600'}>Real transformations built for local neighborhood commercial ecosystems.</p>
           </div>
           
-          {/* Filtering Node Array Elements */}
           <div className="flex flex-wrap gap-2">
             {categories.map(cat => (
               <button
@@ -231,7 +245,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Dynamic Project Mapping Component */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPortfolio.map(item => (
             <a 
@@ -252,7 +265,6 @@ export default function App() {
                     {item.category}
                   </span>
                   
-                  {/* Overlay icon suggesting action link */}
                   <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                     <div className="bg-white text-slate-900 p-3 rounded-full shadow-lg flex items-center gap-2 font-bold text-xs transform translate-y-2 group-hover:translate-y-0 transition-transform">
                       Launch Live Demo <ExternalLink size={14} />
@@ -268,6 +280,86 @@ export default function App() {
               </div>
             </a>
           ))}
+        </div>
+      </section>
+
+      {/* --- IN-LINE HOMEPAGE EARLY BIRD OFFERS SECTION --- */}
+      <section id="early-bird" className={`py-20 border-t scroll-mt-16 ${darkMode ? 'bg-slate-900/30 border-slate-900' : 'bg-emerald-50/40 border-emerald-100'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center mb-16 relative">
+            <span className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              Limited Founding Privilege Slots
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-4">
+              Early Bird Launch Offers
+            </h2>
+            <p className={`text-base max-w-2xl mx-auto ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+              To celebrate Webbit going live, we are extending explicit configuration bonuses to our <strong className="text-emerald-400">first five agency partners</strong>. Secure your edge.
+            </p>
+
+            <div className="mt-6 inline-flex items-center gap-3 px-5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-200">
+              <span className="flex h-2.5 w-2.5 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              Remaining Slots Available: <strong className="text-emerald-400">3 / 5</strong>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Offer 1 */}
+            <div className={`p-6 rounded-2xl border flex flex-col justify-between ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200 shadow-sm'}`}>
+              <div>
+                <div className="text-emerald-400 p-3 bg-emerald-500/10 inline-block rounded-xl mb-4">
+                  <Wrench size={24} />
+                </div>
+                <span className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Perk #01</span>
+                <h3 className="text-xl font-bold mb-3">1-Month Free Website Maintenance</h3>
+                <p className={`text-sm leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                  Zero overhead layout updates, content updates, security optimization adjustments, and database health evaluations post-deployment.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-800/20 text-xs font-semibold text-emerald-400 bg-emerald-500/5 py-1.5 px-3 rounded-lg text-center">
+                Save ₹5,000 Upfront
+              </div>
+            </div>
+
+            {/* Offer 2 */}
+            <div className={`p-6 rounded-2xl border flex flex-col justify-between ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200 shadow-sm'}`}>
+              <div>
+                <div className="text-indigo-400 p-3 bg-indigo-500/10 inline-block rounded-xl mb-4">
+                  <Layers size={24} />
+                </div>
+                <span className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Perk #02</span>
+                <h3 className="text-xl font-bold mb-3">Free Custom Prototyping First</h3>
+                <p className={`text-sm leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                  We draft and test an actionable structural framework interface mock for your brand ecosystem before requiring any project advance balance.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-800/20 text-xs font-semibold text-indigo-400 bg-indigo-500/5 py-1.5 px-3 rounded-lg text-center">
+                100% Risk-Free Architecture
+              </div>
+            </div>
+
+            {/* Offer 3 */}
+            <div className={`p-6 rounded-2xl border flex flex-col justify-between ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-200 shadow-sm'}`}>
+              <div>
+                <div className="text-amber-400 p-3 bg-amber-500/10 inline-block rounded-xl mb-4">
+                  <Coins size={24} />
+                </div>
+                <span className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Perk #03</span>
+                <h3 className="text-xl font-bold mb-3">Refer & Credit ₹1,000 Cash Back</h3>
+                <p className={`text-sm leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                  Introduce neighboring businesses to the platform. If they activate a deployment run, we deduct ₹1,000 from your invoice statement immediately.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-800/20 text-xs font-semibold text-amber-400 bg-amber-500/5 py-1.5 px-3 rounded-lg text-center">
+                Uncapped Referral Scale
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
